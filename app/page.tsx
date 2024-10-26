@@ -8,7 +8,7 @@ export default function Home() {
       <div className=" w-full  bg-dot-black/[0.1] relative">
         <Hero />
       </div>
-      <div className="absolute  inset-0 flex items-center justify-center  [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      <div className="absolute inset-0 flex items-center justify-center  [mask-image:radial-gradient(to_bottom,black_50%,transparent_100%))]"></div>
     </main>
   );
 }
