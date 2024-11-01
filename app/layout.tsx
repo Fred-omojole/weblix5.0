@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { PrismicPreview } from "@prismicio/next";
-import { repositoryName } from "@/prismicio";
+// import { PrismicPreview } from "@prismicio/next";
+// import { repositoryName } from "@/prismicio";
 
 import { Poppins } from "next/font/google";
 import "./globals.css";
@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         {children}
-        <PrismicPreview repositoryName={repositoryName} />
+        {/* <PrismicPreview repositoryName={repositoryName} /> */}
       </body>
     </html>
   );

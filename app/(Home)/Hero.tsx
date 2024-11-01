@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="px-16">
         <div className="container w-full mx-auto ">
           <div className="flex flex-col items-center justify-center">
-            <div className="mb-36">
+            <div className="mb-36 ">
               <Image
                 src="/weblix logo.svg"
                 width={90}
@@ -38,14 +38,14 @@ const Hero = () => {
 
             <div className="text-center max-w-[800px]  mt-6 tracking-tight leading-snug  text-wrap">
               <HighlightedTitle
-                className="font-medium text-[78px] -leading-[0.32] "
+                className="font-medium text-[78px] -leading-[0.32]  "
                 text={"Crafting"}
                 highlightedText={"Next-Gen"}
               />
             </div>
           </div>
           <div className="flex items-center justify-center gap-3 mt-10 max- ">
-            <Link href={""}>
+            <Link href={"/"}>
               <ReuseableButton
                 text={"Book a Call"}
                 className="px-[32px] py-[20px] text-white bg-black gap-2 flex"
@@ -67,7 +67,7 @@ const Hero = () => {
                 Book a Call
               </button> */}
             </Link>
-            <Link href={""}>
+            <Link href={"/"}>
               <ReuseableButton
                 text={"Discover Services"}
                 className="px-[32px] py-[20px] text-black  bg-[#eee] gap-2 flex"

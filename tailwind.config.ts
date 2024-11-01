@@ -12,7 +12,12 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "custom-green-32": "var(--custom-green-32)",
+        "custom-green-4": "var(--custom-green-4)",
+      },
+    },
   },
   plugins: [
     // addVariablesForColors,

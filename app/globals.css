@@ -5,6 +5,8 @@
 :root {
   --background-color: #fffef7;
   --foreground-color: #fffef7;
+  --custom-green-32: hsla(154.6875, 85.71%, 43.92%, 0.32);
+  --custom-green-4: hsla(154.6875, 85.71%, 43.92%, 0.04);
 }
 
 @layer base {
