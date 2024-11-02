@@ -14,7 +14,7 @@ interface HighlightedProps {
   colorScheme?: "green" | "blue" | "purple" | "custom";
   customColors?: ColorScheme;
 }
-
+// USING A TYPESCRIPT TYPE THAT CREATES AN OBJECT TYPE WHERE THE KEYS ARE OF TYPE K AND THE VALUES ARE OF TYPE T Record<K, T>
 const colorSchemes: Record<string, ColorScheme> = {
   green: {
     border: "border-l-green-500",
