@@ -1,9 +1,10 @@
-// import React, { useState } from "react";
+import React from "react";
 
 // import { Menu, MenuItem } from "@/app/(Home)/components/ui/navbar-menu";
 import { Menu } from "@/app/(Home)/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { Fullscreen } from "lucide-react";
 // import URL from "url";
 // import { LinkProps } from "next/link";
 type NavContents = {
@@ -32,7 +33,10 @@ function Navbar({ className }: { className?: string }) {
 
   return (
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+      className={cn(
+        "fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 rounded-full",
+        className
+      )}
     >
       <Menu>
         {navContent.map((item, index) => {
@@ -41,12 +45,12 @@ function Navbar({ className }: { className?: string }) {
             <Link
               href={item.href}
               key={item.href}
-              className={`${index != 0 ? "border-l border-solid" : ""}capitalize cursor-pointer w-full   flex items-center justify-center    text-[#8b8b8b]  text-[14px] leading-[132%] tracking-[-0.14px]  pt-6 pb-6 pl-8 pr-8`}
+              className={`${index === 0 ? "hover:rounded-l-full" : ""} ${index != 0 ? "border-l border-solid" : ""}  ${index === navContent.length - 1 ? "hover: rounded-r-full" : ""} capitalize cursor-pointer w-full   flex items-center justify-center text-[#8b8b8b]  text-[14px] leading-[132%] tracking-[-0.14px]  pt-6 pb-6 pl-8 pr-8 hover:px-[48px] transition-all hover:bg-[#eee] `}
             >
               {index === navContent.length - 1 ? (
                 <>
                   {" "}
-                  <div className=" ">
+                  <div className="">
                     <span className="relative inline-flex h-2 w-2 mr-1  ">
                       <span className="animate-ping absolute h-full w-full rounded-full bg-green-300" />
                       <span className="rounded-full h-2 w-2 bg-green-500" />

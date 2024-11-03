@@ -64,12 +64,13 @@ export const Menu = ({
   children,
 }: {
   // setActive: (item: string | null) => void;
+
   children: React.ReactNode;
 }) => {
   return (
     <div
       // resets the state
-      className="border-2 bg-[rgb(230,230,230,1)] rounded-full "
+      className={`border-2 bg-[rgb(230,230,230,1)] rounded-full `}
     >
       {" "}
       <nav className="relative rounded-full border  bg-white flex justify-center   ">
