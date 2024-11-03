@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 // import { motion } from "framer-motion";
-import Link from "next/link";
+
 // import Image from "next/image";
 
 // const transition = {
@@ -72,7 +72,7 @@ export const Menu = ({
       className="border-2 bg-[rgb(230,230,230,1)] rounded-full "
     >
       {" "}
-      <nav className="relative rounded-full border  bg-white flex justify-center space-x-4   ">
+      <nav className="relative rounded-full border  bg-white flex justify-center   ">
         {children}
       </nav>
     </div>
