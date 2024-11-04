@@ -85,7 +85,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="mt-[120px]">
+        <div className="mt-[120px] rounded-3xl">
           {" "}
           <Video />
         </div>

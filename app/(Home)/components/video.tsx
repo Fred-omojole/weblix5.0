@@ -25,7 +25,7 @@ import React from "react";
 
 const Video = () => {
   return (
-    <div className="relative overflow-x-hidden h-96 rounded-3xl bg-center">
+    <div className="relative overflow-x-hidden h-[95vh]  rounded-3xl bg-center">
       <video
         className="absolute inset-0 w-full h-full object-cover -z-10"
         loop
