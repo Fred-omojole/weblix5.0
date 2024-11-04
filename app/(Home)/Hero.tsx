@@ -85,7 +85,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute">
+        <div className="mt-[120px]">
           {" "}
           <Video />
         </div>
