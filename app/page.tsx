@@ -1,5 +1,7 @@
 // import Image from "next/image";
 
+// import { Video } from "lucide-react";
+
 import Hero from "./(Home)/Hero";
 import { NavbarDemo } from "./(Home)/Navbar";
 

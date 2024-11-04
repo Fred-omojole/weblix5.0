@@ -4,7 +4,7 @@ import React from "react";
 import { Menu } from "@/app/(Home)/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { Fullscreen } from "lucide-react";
+
 // import URL from "url";
 // import { LinkProps } from "next/link";
 type NavContents = {

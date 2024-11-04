@@ -70,7 +70,7 @@ export const Menu = ({
   return (
     <div
       // resets the state
-      className={`border-2 bg-[rgb(230,230,230,1)] rounded-full `}
+      className={`border-2 bg-[rgb(230,230,230,1)] rounded-full z-10 `}
     >
       {" "}
       <nav className="relative rounded-full border  bg-white flex justify-center   ">

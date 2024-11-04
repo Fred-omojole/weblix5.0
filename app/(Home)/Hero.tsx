@@ -4,10 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import HighlightedTitle from "./components/Highlighted";
 import ReuseableButton from "./components/ReuseableButton";
+import Video from "./components/video";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen pt-10 ">
+    <section className="min-h-screen pt-10 max-w-[1728px] w-[100%] ">
       <div className="px-16">
         <div className="container w-full mx-auto ">
           <div className="flex flex-col items-center justify-center">
@@ -82,6 +83,11 @@ const Hero = () => {
               </button> */}
             </Link>
           </div>
+        </div>
+
+        <div className="absolute">
+          {" "}
+          <Video />
         </div>
       </div>
     </section>
