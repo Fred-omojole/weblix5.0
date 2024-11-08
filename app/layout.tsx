@@ -11,8 +11,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Weblix",
-  description: "Weblix for Web Experience",
+  title: "Webify",
+  description: "Webify for Web Experience",
   icons: {
     icon: ["/logoss.png?v=4"],
     shortcut: ["/logoss.png"],

@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/variant";
 
 interface ColorScheme {
   border: string;
@@ -45,7 +47,14 @@ const HighlightedTitle = ({
 }: HighlightedProps) => {
   const colors = customColors || colorSchemes[colorScheme];
   return (
-    <h1 className={className}>
+    <motion.h1
+      className={className}
+      initial="hidden"
+      variants={fadeIn("up", 0.01, 0.4)}
+      animate="show"
+      viewport={{ once: true, amount: 0.2 }}
+      // whileInView={"show"}
+    >
       {text}{" "}
       <span
         className={`border-l-4 border-solid ${colors.border} relative inline-block `}
@@ -57,7 +66,7 @@ const HighlightedTitle = ({
         <span className="relative">{highlightedText}</span>
       </span>
       {suffix && `${suffix}`}
-    </h1>
+    </motion.h1>
   );
 };
 

@@ -5,6 +5,8 @@ import Link from "next/link";
 import HighlightedTitle from "./components/Highlighted";
 import ReuseableButton from "./components/ReuseableButton";
 import Video from "./components/video";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/variant";
 
 const Hero = () => {
   return (
@@ -20,22 +22,23 @@ const Hero = () => {
                 alt="webify Logo "
               />
             </div>
-            <div className="text-sm font-medium text-black flex gap-2 items-center">
+            <motion.div
+              initial="hidden"
+              variants={fadeIn("up", 0.05, 0.2)}
+              animate="show"
+              viewport={{ once: true, amount: 0.1 }}
+              className="text-sm font-medium text-black flex gap-2 items-center"
+            >
               <span className="relative inline-flex h-2 w-2">
                 <span className="animate-ping absolute h-full w-full rounded-full bg-green-300" />
                 <span className="rounded-full h-2 w-2 bg-green-500" />
               </span>
 
-              {/* <span className="relative">
-                {" "}
-                <span className="animate-ping h-full w-full absolute rounded-full bg-green-300 "></span>
-                <span className="relative inline-flex rounded-full h-3 w-3  bg-green-500"></span>
-              </span> */}
               <p className="text-[16px]">
                 {/* <span className="animate-ping w-full h-full rounded-full bg-green-500"></span> */}
                 Digital Development Agency{" "}
               </p>
-            </div>
+            </motion.div>
 
             <div className="text-center max-w-[800px]  mt-6 tracking-tight leading-snug  text-wrap">
               <HighlightedTitle
@@ -45,28 +48,19 @@ const Hero = () => {
               />
             </div>
           </div>
-          <div className="flex items-center justify-center gap-3 mt-10 max- ">
+          <motion.div
+            initial="hidden"
+            variants={fadeIn("up", 0.03, 0.4)}
+            animate="show"
+            viewport={{ once: true, amount: 0.1 }}
+            className="flex items-center justify-center gap-3 mt-10 max- "
+          >
             <Link href={"/"}>
               <ReuseableButton
                 text={"Book a Call"}
                 className="px-[32px] py-[20px] text-white bg-black gap-2 flex"
                 icon={true}
               />
-
-              {/* <button
-                className="gap-2 bg-black text-white px-[32px] py-[20px] justify-center text-center cursor-pointer rounded-full flex items-center hover:px-[48px] transition-[padding]"
-                title="call button"
-              >
-                {" "}
-                <Image
-                  className="text-white"
-                  src="/phonesvg.svg"
-                  alt="icon"
-                  width={20}
-                  height={20}
-                />
-                Book a Call
-              </button> */}
             </Link>
             <Link href={"/"}>
               <ReuseableButton
@@ -74,15 +68,8 @@ const Hero = () => {
                 className="px-[32px] py-[20px] text-black  bg-[#eee] gap-2 flex"
                 icon={false}
               />
-
-              {/* <button
-                className="text-black px-[32px] py-[20px] cursor-pointer rounded-full  bg-[#eee] hover:px-[48px] transition-[padding]"
-                title="discover button"
-              >
-                Discover Services
-              </button> */}
             </Link>
-          </div>
+          </motion.div>
         </div>
 
         <div className="mt-[120px] rounded-3xl">

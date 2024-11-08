@@ -1,15 +1,43 @@
+"use client";
 import React from "react";
 
-// import { Menu, MenuItem } from "@/app/(Home)/components/ui/navbar-menu";
 import { Menu } from "@/app/(Home)/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
-// import URL from "url";
-// import { LinkProps } from "next/link";
 type NavContents = {
   title: string;
   href: string;
+};
+
+// const navContainer = {
+//   hidden: {
+//     opacity: 1,
+//     scale: 0,
+//   },
+//   visible: { opacity: 1, scale: 1 },
+//   transition: {
+//     type: "tween",
+//     duration: 0.4,
+//     delay: 0.3,
+//     ease: [0.25, 0.25, 0.25, 0.75],
+//   },
+// };
+
+const navContainer = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: 0.05,
+      type: "spring",
+      stiffness: 260,
+      damping: 20,
+      duration: 0.2,
+    },
+  },
 };
 
 export function NavbarDemo() {
@@ -21,22 +49,22 @@ export function NavbarDemo() {
 }
 
 function Navbar({ className }: { className?: string }) {
-  // const [active, setActive] = useState<string | null>(null);
-
   const navContent: NavContents[] = [
     { title: "services", href: "/services" },
     { title: "works", href: "/works" },
     { title: "pricing", href: "/pricing" },
     { title: "contact us", href: "/contact-us" },
   ];
-  console.log("navcontents", navContent);
 
   return (
-    <div
+    <motion.div
       className={cn(
         "fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 rounded-full",
         className
       )}
+      initial="hidden"
+      variants={navContainer}
+      animate="visible"
     >
       <Menu>
         {navContent.map((item, index) => {
@@ -65,6 +93,6 @@ function Navbar({ className }: { className?: string }) {
           );
         })}
       </Menu>
-    </div>
+    </motion.div>
   );
 }
