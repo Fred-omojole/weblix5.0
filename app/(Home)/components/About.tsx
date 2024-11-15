@@ -14,12 +14,19 @@ const About = () => {
             />
           </div>
 
-          <h3 className="text-[#8b8b8b] leading-[116%] text-[32px] font-medium tracking-[-1.28px] ">
+          <h3 className="text-[#8b8b8b] leading-[116%] text-[33px] font-medium tracking-[-1.26px] ">
             At Webify, we specialize in{" "}
-            <span>crafting next-gen web experiences</span> that blend creativity
-            with cutting-edge technology.
-            <span> We deliver tailored solutions </span> for upgrading your site
-            or creating a new digital platform.
+            <span className="text-black">
+              crafting next-gen web experiences
+            </span>{" "}
+            that blend creativity with cutting-edge technology.
+            <br />
+            <br />
+            <span className="text-black">
+              {" "}
+              We deliver tailored solutions{" "}
+            </span>{" "}
+            for upgrading your site or creating a new digital platform.
           </h3>
         </div>
       </div>
