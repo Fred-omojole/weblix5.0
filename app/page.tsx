@@ -2,6 +2,7 @@
 
 // import { Video } from "lucide-react";
 
+import About from "./(Home)/components/About";
 import Hero from "./(Home)/Hero";
 import { NavbarDemo } from "./(Home)/Navbar";
 
@@ -13,6 +14,7 @@ export default function Home() {
         <NavbarDemo />
       </div>
       <div className="-z-10 absolute inset-0 flex items-center justify-center  [mask-image:radial-gradient(to_bottom,black_50%,transparent_100%))]"></div>
+      <About />
     </main>
   );
 }
