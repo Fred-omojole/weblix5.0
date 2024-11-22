@@ -13,6 +13,9 @@
   * {
     background-color: var(--background);
   }
+  :root {
+    --radius: 0.5rem;
+  }
 }
 
 html {
