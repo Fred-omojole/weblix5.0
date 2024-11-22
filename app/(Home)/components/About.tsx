@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import ReuseableButton from "./ReuseableButton";
+import Link from "next/link";
 const About = () => {
   return (
     <section className="mt-40 pt-20 pb-60 ">
@@ -28,6 +30,15 @@ const About = () => {
             </span>{" "}
             for upgrading your site or creating a new digital platform.
           </h3>
+          <Link href="/work">
+            <ReuseableButton
+              text={"our works"}
+              className={
+                "border-solid border-[1px] text-black hover:px-[40px] hover:bg-[#f4f4f4] bg-[#eee] border-[#eee]   px-[32px] py-[20px] flex items-center justify-center capitalize  "
+              }
+              icon={false}
+            />
+          </Link>
         </div>
       </div>
     </section>

@@ -5,6 +5,7 @@ const Video = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Simulate loading or add actual loading logic
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
