@@ -25,7 +25,7 @@ const ReuseableButton = ({
   return (
     <button
       title="button"
-      className={` hover:px-[48px] transition-[padding]  justify-center text-center cursor-pointer rounded-full ${className}`}
+      className={` hover:px-[48px] transition-[padding]   justify-center text-center cursor-pointer rounded-full ${className}`}
     >
       {icon && <Icon />}
       {text}

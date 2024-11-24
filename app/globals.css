@@ -7,6 +7,12 @@
   --foreground-color: #fffef7;
   --custom-green-32: hsla(154.6875, 85.71%, 43.92%, 0.32);
   --custom-green-4: hsla(154.6875, 85.71%, 43.92%, 0.04);
+
+  --custom-blue-32: hsla(201, 87%, 49%, 0.32);
+  --custom-blue-4: hsla(201, 87%, 49%, 0.04);
+
+  --custom-purple-32: hsla(271, 100%, 61%, 0.32);
+  --custom-purple-4: hsla(271, 100%, 61%, 0.04);
 }
 
 @layer base {

@@ -6,24 +6,43 @@ import colors from "tailwindcss/colors";
 import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
 
 const config: Config = {
-    darkMode: ["class"],
-    content: [
+  darkMode: ["class"],
+  content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-  	extend: {
-  		colors: {
-  			'custom-green-32': 'var(--custom-green-32)',
-  			'custom-green-4': 'var(--custom-green-4)'
-  		},
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		}
-  	}
+    extend: {
+      colors: {
+        "custom-green-32": "var(--custom-green-32)",
+        "custom-green-4": "var(--custom-green-4)",
+        "custom-blue-32": "var(--custom-blue-32)",
+        "custom-blue-4": "var(--custom-blue-4)",
+        "custom-purple-32": "var(--custom-purple-32)",
+        "custom-purple-4": "var(--custom-purple-4)",
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+
+      animation: {
+        "slide-left": "slideLeft 29s linear infinite",
+        "slide-right": "slideRight 29s linear infinite",
+      },
+      keyframes: {
+        slideLeft: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        slideRight: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+      },
+    },
   },
   plugins: [
     // addVariablesForColors,
@@ -49,8 +68,8 @@ const config: Config = {
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
     },
-      require("tailwindcss-animate")
-],
+    require("tailwindcss-animate"),
+  ],
 };
 
 // function addVariablesForColors({ addBase, theme }: any) {

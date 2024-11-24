@@ -7,20 +7,8 @@ import ReuseableButton from "./components/ReuseableButton";
 import Video from "./components/video";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/variant";
-import { useState, useEffect } from "react";
-import VideoSkeleton from "./VideoSkeleton";
 
 const Hero = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <section className="min-h-screen pt-10 max-w-[1728px] w-[100%] ">
       <div className="px-16">
@@ -86,7 +74,7 @@ const Hero = () => {
 
         <div className="mt-[120px] rounded-3xl">
           {" "}
-          {isLoading ? <VideoSkeleton /> : <Video />}
+          <Video />
         </div>
       </div>
     </section>

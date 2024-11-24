@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/variant";
@@ -25,15 +26,15 @@ const colorSchemes: Record<string, ColorScheme> = {
   },
 
   blue: {
-    border: "border-l-green-500",
-    gradientFrom: "from-custom-green-32",
-    gradientTo: "to-custom-green-4",
+    border: "border-l-blue-500",
+    gradientFrom: "from-custom-blue-32",
+    gradientTo: "to-custom-blue-4",
   },
 
   purple: {
-    border: "border-l-green-500",
-    gradientFrom: "from-custom-green-32",
-    gradientTo: "to-custom-green-4",
+    border: "border-l-purple-500",
+    gradientFrom: "from-custom-purple-32",
+    gradientTo: "to-custom-purple-4",
   },
 };
 

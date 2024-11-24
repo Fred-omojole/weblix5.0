@@ -34,7 +34,7 @@ const About = () => {
             <ReuseableButton
               text={"our works"}
               className={
-                "border-solid border-[1px] text-black hover:px-[40px] hover:bg-[#f4f4f4] bg-[#eee] border-[#eee]   px-[32px] py-[20px] flex items-center justify-center capitalize  "
+                "border-solid border-[1px] text-black hover:px-[40px] hover:bg-[#f4f4f4] bg-[#eee] border-[#eee] duration-200   px-[32px] py-[20px] flex items-center justify-center capitalize  "
               }
               icon={false}
             />
