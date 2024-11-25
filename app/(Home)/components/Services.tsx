@@ -12,6 +12,18 @@ const Services = () => {
             </h2>
           </div>
         </div>
+        <div className=" flex w-full flex-col flex-nowrap justify-start items-start gap-6">
+          <div className="flex w-full p-10 flex-col flex-nowrap gap-8 border-solid border-[1px] rounded-[32px] bg-white border-t-[#eee] border-b-[#eee] border-r-[#eee] border-l-[#eee]">
+            <div className="flex justify-between items-center gap-6">
+              <h3 className="my-0 text-[32px] leading-[116%] font-medium tracking-[-1.28px] ">
+                Our Services
+              </h3>
+              <div className="flex px-[14px] py-2 justify-center items-center rounded-[100px] text-[14px] leading-[132%] text-center tracking-[-0.14px] text-[#0a955a] bg-green-100">
+                3 services
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
