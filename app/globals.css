@@ -24,6 +24,14 @@
   }
 }
 
+.backgrounds {
+  background-color: linear-gradient(
+    45deg,
+    black 15%,
+    hsla(0, 0%, 10.59%, 0) 80%
+  );
+}
+
 html {
   scroll-behavior: smooth;
 }
