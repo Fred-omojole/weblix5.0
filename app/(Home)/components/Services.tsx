@@ -1,6 +1,6 @@
-import Image from "next/image";
 import React from "react";
-import { MdArrowOutward } from "react-icons/md";
+
+import ServiceCards from "../ServiceCards";
 
 const Services = () => {
   return (
@@ -24,36 +24,10 @@ const Services = () => {
                 3 services
               </div>
             </div>
-            <div className="gap-3 grid grid-cols-2 row-auto ">
-              <a className="relative flex  overflow-hidden w-full max-w-[100%] h-[560px] py-[40px] px-[32px] flex-col flex-nowrap justify-end items-start border-solid border-[1px] rounded-2xl border-[#eee] ">
-                <div className="relative text-black z-2 flex flex-col justify-start items-start gap-5">
-                  <div className="z-2 flex max-w-[320px] flex-col flex-nowrap gap-3 text-white ">
-                    <h4 className="max-w-[200px] my-0 text-[24px] leading-[112%] font-medium tracking-[-0.72px] capitalize">
-                      custom website development
-                    </h4>
-                    <p className="!text-white/60 text-[14px] leading-[132%] tracking-[-0.14px] mb-0 mt-0">
-                      Web solutions designed to enhance user experience and meet
-                      specific business goals.
-                    </p>
-                  </div>
-                  <div className="px-1 gap-2 rounded-[0px] opacity-100 transition-all duration-200 ease-in-out">
-                    <div className="capitalize flex items-center justify-center gap-2 text-white">
-                      get started{" "}
-                      <span className="w-4 h-4 ">
-                        {" "}
-                        <MdArrowOutward />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute inset-0 z-10 w-full h-full backgrounds"></div>
-                <Image
-                  className="w-full h-full absolute object-cover inset-0 z-0  max-w-[100%] align-middle inline-block"
-                  src={"/Custom Website Development.webp"}
-                  alt="Custom Website Development"
-                  fill
-                />
-              </a>
+            <div className="gap-3 grid grid-cols-2  row-auto ">
+              {/* CREATE DYNAMIC component  SERVICESs */}
+
+              <ServiceCards />
             </div>
           </div>
         </div>
