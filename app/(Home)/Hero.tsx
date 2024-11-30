@@ -58,14 +58,14 @@ const Hero = () => {
             <Link href={"/"}>
               <ReuseableButton
                 text={"Book a Call"}
-                className="px-[32px] py-[20px] text-white bg-black gap-2 flex"
+                className="px-[32px] py-[20px] text-white bg-black gap-2 flex ease-linear hover:bg-black/85 "
                 icon={true}
               />
             </Link>
             <Link href={"/"}>
               <ReuseableButton
                 text={"Discover Services"}
-                className="px-[32px] py-[20px] text-black  bg-[#eee] gap-2 flex"
+                className="px-[32px] py-[20px] text-black  bg-[#eee] gap-2 flex ease-linear"
                 icon={false}
               />
             </Link>

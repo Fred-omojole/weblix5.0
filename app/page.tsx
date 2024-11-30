@@ -2,6 +2,7 @@
 
 // import { Video } from "lucide-react";
 
+import Benefits from "./(Home)/Benefits";
 import About from "./(Home)/components/About";
 import Services from "./(Home)/components/Services";
 import Thicker from "./(Home)/components/thicker";
@@ -19,6 +20,7 @@ export default function Home() {
       <About />
       <Thicker />
       <Services />
+      <Benefits />
     </main>
   );
 }

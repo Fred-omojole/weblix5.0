@@ -1,6 +1,7 @@
 import React from "react";
 
 import ServiceCards from "../ServiceCards";
+import ReuseableButton from "./ReuseableButton";
 
 const Services = () => {
   return (
@@ -28,6 +29,27 @@ const Services = () => {
               {/* CREATE DYNAMIC component  SERVICESs */}
 
               <ServiceCards />
+            </div>
+          </div>
+          <div className="flex w-full py-8 px-10 justify-between items-center gap-6 border-solid border-[1px] border-[#eee] rounded-[32px] bg-white">
+            <h4 className="text-[24px] my-0 leading-[112%] font-medium tracking-[-0.72px] text-[#1b1b1b] ">
+              Need custom solution for all of your needs?
+            </h4>
+            <div className=" flex gap-3 ">
+              <ReuseableButton
+                text={"Book a call"}
+                className={
+                  "px-[32px] py-[20px] text-white bg-[#1b1b1b] gap-2 flex hover:px-[39px] ease-linear hover:bg-black/85 "
+                }
+                icon={true}
+              />
+              <ReuseableButton
+                text={"Book a call"}
+                className={
+                  "px-[32px] py-[20px] text-[#1b1b1b]  bg-[#eee] gap-2 flex hover:px-[39px] ease-linear"
+                }
+                icon={false}
+              />
             </div>
           </div>
         </div>
