@@ -3,6 +3,7 @@ import ReuseableButton from "./components/ReuseableButton";
 import { IoIosCheckmark } from "react-icons/io";
 import { HiMiniXMark } from "react-icons/hi2";
 import Image from "next/image";
+import VerticalCarousels from "./VerticalCarousels";
 
 interface OptimalProps {
   icon: JSX.Element;
@@ -58,6 +59,22 @@ const medium: mediumProps[] = [
     icon: <HiMiniXMark className="w-[12px] h-[12px]  " />,
     text: "Limited Testing or Inadequate Quality Control",
   },
+];
+
+const images = [
+  { url: "/Logo 1.svg" },
+  { url: "/Logo 2.svg" },
+  { url: "/Logo 3.svg" },
+  { url: "/Logo 4.svg" },
+  { url: "/Logo 5.svg" },
+];
+
+const image = [
+  { url: "/Logo 7.svg" },
+  { url: "/Logo 6.svg" },
+  { url: "/Logo 8.svg" },
+  { url: "/Logo 9.svg" },
+  { url: "/Logo 10.svg" },
 ];
 
 const Benefits = () => {
@@ -123,6 +140,67 @@ const Benefits = () => {
                 );
               })}
             </div>
+          </div>
+        </div>
+        <div className="flex overflow-hidden w-full h-[600px] pr-10 pl-10  gap-3 border-solid border-[1px] rounded-[32px] border-[#eee]">
+          <div className="overflow-hidden flex-1">
+            <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+                <VerticalCarousels images={images} />
+                <VerticalCarousels images={images} />
+              </div>
+            </div>
+            {/* 
+            <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+                <VerticalCarousels images={image} />
+              </div>
+            </div> */}
+          </div>
+
+          <div className="overflow-hidden flex-1">
+            <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+                <VerticalCarousels images={image} />
+                <VerticalCarousels images={image} />
+              </div>
+            </div>
+
+            {/* <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+                <VerticalCarousels images={image} />
+              </div>
+            </div> */}
+          </div>
+
+          <div className="overflow-hidden flex-1">
+            <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+                <VerticalCarousels images={images} />
+                <VerticalCarousels images={images} />
+              </div>
+            </div>
+
+            {/* <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+                <VerticalCarousels images={image} />
+              </div>
+            </div> */}
+          </div>
+
+          <div className="overflow-hidden flex-1">
+            <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+                <VerticalCarousels images={image} />
+                <VerticalCarousels images={image} />
+              </div>
+            </div>
+
+            {/* <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+                <VerticalCarousels images={image} />
+              </div>
+            </div> */}
           </div>
         </div>
       </div>
