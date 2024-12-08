@@ -31,8 +31,20 @@ const config: Config = {
       animation: {
         "slide-left": "slideLeft 29s linear infinite",
         "slide-right": "slideRight 29s linear infinite",
+        "slide-up": "slideUp 29s linear infinite",
+        "slide-down": "slideDown 29s linear infinite",
       },
       keyframes: {
+        slideDown: {
+          "0%": { transform: "translateY(0%)" },
+          "100%": { transform: "translateY(100%)" },
+        },
+
+        slideUp: {
+          "0%": { transform: "translateY(0%)" },
+          "100%": { transform: "translateY(100%)" },
+        },
+
         slideLeft: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },

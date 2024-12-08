@@ -27,7 +27,6 @@ const Services = () => {
             </div>
             <div className="gap-3 grid grid-cols-2  row-auto ">
               {/* CREATE DYNAMIC component  SERVICESs */}
-
               <ServiceCards />
             </div>
           </div>
@@ -39,7 +38,7 @@ const Services = () => {
               <ReuseableButton
                 text={"Book a call"}
                 className={
-                  "px-[32px] py-[20px] text-white bg-[#1b1b1b] gap-2 flex hover:px-[39px] ease-linear hover:bg-black/85 "
+                  "px-[32px] py-[20px] text-white bg-[#1b1b1b] gap-2 flex hover:px-[39px] ease-linear hover:bg-black/85"
                 }
                 icon={true}
               />

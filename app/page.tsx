@@ -7,7 +7,8 @@ import About from "./(Home)/components/About";
 import Services from "./(Home)/components/Services";
 import Thicker from "./(Home)/components/thicker";
 import Hero from "./(Home)/Hero";
-import { NavbarDemo } from "./(Home)/Navbar";
+// import { NavbarDemo } from "./(Home)/Navbar";
+import Works from "./(Home)/Works";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Thicker />
       <Services />
       <Benefits />
+      <Works />
     </main>
   );
 }

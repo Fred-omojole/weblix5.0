@@ -145,22 +145,22 @@ const Benefits = () => {
         <div className="flex overflow-hidden w-full h-[600px] pr-10 pl-10  gap-3 border-solid border-[1px] rounded-[32px] border-[#eee]">
           <div className="overflow-hidden flex-1">
             <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+              <div className="flex w-full animate-slide-down flex-col flex-nowrap justify-start items-center gap-3 ">
                 <VerticalCarousels images={images} />
+                {/* <VerticalCarousels images={images} /> */}
+              </div>
+            </div>
+
+            <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+              <div className="flex w-full animate-slide-down flex-col flex-nowrap justify-start items-center gap-3 ">
                 <VerticalCarousels images={images} />
               </div>
             </div>
-            {/* 
-            <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-                <VerticalCarousels images={image} />
-              </div>
-            </div> */}
           </div>
 
           <div className="overflow-hidden flex-1">
             <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
+              <div className=" flex animate-slide-up w-full flex-col flex-nowrap justify-start items-center gap-3 ">
                 <VerticalCarousels images={image} />
                 <VerticalCarousels images={image} />
               </div>

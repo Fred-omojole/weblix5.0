@@ -51,47 +51,51 @@ const cards: CardProps[] = [
 const ServiceCards = () => {
   return (
     <>
-      {cards.map(({ id, title, description, action, icon, imageUrl, alt }) => {
-        return (
-          <>
-            <a
-              key={id}
-              className={
-                id === cards.length
-                  ? `relative flex row-span-1 col-span-2 overflow-hidden w-full  h-[464px] py-[40px] px-[32px] flex-col flex-nowrap justify-end items-start border-solid border-[1px] rounded-2xl border-t-[#eee] border-b-[#eee] border-r-[#eee] border-l-[#eee] `
-                  : `relative flex  overflow-hidden w-full max-w-[100%] h-[560px] py-[40px] px-[32px] flex-col flex-nowrap justify-end items-start border-solid border-[1px] rounded-2xl border-t-[#eee] border-b-[#eee] border-r-[#eee] border-l-[#eee] `
-              }
-            >
-              <div className="relative text-black z-10 flex flex-col justify-start items-start gap-5">
-                <div className="z-10 flex max-w-[320px] flex-col flex-nowrap gap-3 text-white">
-                  <h4 className="max-w-[200px] my-0 text-[24px] leading-[112%] font-medium tracking-[-0.72px] capitalize">
-                    {title}
-                  </h4>
-                  <p className="!text-white/60 text-[14px] leading-[132%] tracking-[-0.14px] mb-0 mt-0">
-                    {description}
-                  </p>
-                </div>
-                <div className="group px-1 gap-2 cursor-pointer">
-                  <div className="capitalize flex  items-center justify-center gap-2 text-white transition-all duration-200  group-hover:text-neutral-400">
-                    {action}{" "}
-                    <span className="w-4 h-4 transition-all group-hover:translate-x-2 duration-200 group-hover:text-neutral-400">
+      {cards.map(
+        ({ id, title, description, action, icon, imageUrl, alt }, index) => {
+          return (
+            <React.Fragment key={index}>
+              <a
+                key={id}
+                className={
+                  id === cards.length
+                    ? `relative flex row-span-1 col-span-2 overflow-hidden w-full  h-[464px] py-[40px] px-[32px] flex-col flex-nowrap justify-end items-start border-solid border-[1px] rounded-2xl border-t-[#eee] border-b-[#eee] border-r-[#eee] border-l-[#eee] `
+                    : `relative flex  overflow-hidden w-full max-w-[100%] h-[560px] py-[40px] px-[32px] flex-col flex-nowrap justify-end items-start border-solid border-[1px] rounded-2xl border-t-[#eee] border-b-[#eee] border-r-[#eee] border-l-[#eee] `
+                }
+              >
+                <div className="relative text-black z-10 flex flex-col justify-start items-start gap-5">
+                  <div className="z-10 flex max-w-[320px] flex-col flex-nowrap gap-3 text-white">
+                    <h4 className="max-w-[200px] my-0 text-[24px] leading-[112%] font-medium tracking-[-0.72px] capitalize">
+                      {title}
+                    </h4>
+                    <p className="!text-white/60 text-[14px] leading-[132%] tracking-[-0.14px] mb-0 mt-0">
+                      {description}
+                    </p>
+                  </div>
+
+                  <div className="group flex cursor-pointer items-center gap-2 px-1">
+                    <div className="capitalize text-white transition-all duration-300 ease-in-out group-hover:text-neutral-400">
+                      {action}
+                    </div>
+
+                    <span className="inline-flex h-4 w-4 items-center transition-all duration-300 ease-in-out text-white group-hover:translate-x-2 group-hover:text-neutral-400">
                       {icon}
                     </span>
                   </div>
                 </div>
-              </div>
-              <div className="absolute inset-0 z-[1] w-full h-full bg-[linear-gradient(45deg,black_15%,hsla(0,0.00%,10.59%,0.00)_80%)] "></div>
+                <div className="absolute inset-0 z-[1] w-full h-full bg-[linear-gradient(45deg,black_15%,hsla(0,0.00%,10.59%,0.00)_80%)] "></div>
 
-              <Image
-                className="w-full h-full absolute object-cover inset-0 z-0   max-w-[100%] align-middle inline-block"
-                src={imageUrl}
-                alt={alt}
-                fill
-              />
-            </a>
-          </>
-        );
-      })}
+                <Image
+                  className="w-full h-full absolute object-cover inset-0 z-0   max-w-[100%] align-middle inline-block"
+                  src={imageUrl}
+                  alt={alt}
+                  fill
+                />
+              </a>
+            </React.Fragment>
+          );
+        }
+      )}
     </>
   );
 };
