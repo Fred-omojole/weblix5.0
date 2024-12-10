@@ -22,6 +22,8 @@ const config: Config = {
         "custom-purple-32": "var(--custom-purple-32)",
         "custom-purple-4": "var(--custom-purple-4)",
         customGray: "#8b8b8b",
+        lightGray: "hsla(0, 0%, 98.43%, 0.6)",
+        darkGrey: "hsla(0, 0.00%, 98.43%, 0.20)",
       },
       borderRadius: {
         lg: "var(--radius)",

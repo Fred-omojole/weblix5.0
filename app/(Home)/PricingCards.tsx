@@ -23,6 +23,7 @@ interface Props {
   titleColor?: string;
   features: string[];
   featureColor: string;
+  bgFeature: string;
 }
 
 function PricingCards({
@@ -47,6 +48,7 @@ function PricingCards({
   priceColor,
   features,
   featureColor,
+  bgFeature,
 }: Props) {
   const half = Math.ceil(features.length / 2);
   const firstHalf = features.slice(0, half);
@@ -107,8 +109,13 @@ function PricingCards({
           {firstHalf.map((feature, index) => (
             <div
               key={index}
-              className={`${featureColor} flex justify-start items-start gap-[8px] text-white/60 text-[14px] leading-[132%] tracking-[-0.14%]`}
+              className={`${featureColor} flex justify-start items-start gap-[8px] text-[14px] leading-[132%] tracking-[-0.14%]`}
             >
+              <div className="py-[5px]">
+                <div
+                  className={`w-[8px] h-[8px]  rounded-[50px] ${bgFeature}`}
+                ></div>
+              </div>
               {feature}
             </div>
           ))}
@@ -117,8 +124,13 @@ function PricingCards({
           {secondHalf.map((feature, index) => (
             <div
               key={index}
-              className={` ${featureColor}   flex justify-start items-start gap-[8px]  text-white/60 text-[14px] leading-[132%] tracking-[-0.14%]`}
+              className={` ${featureColor}   flex justify-start items-start gap-[8px]   text-[14px] leading-[132%] tracking-[-0.14%]`}
             >
+              <div className="py-[5px]">
+                <div
+                  className={`w-[8px] h-[8px]  rounded-[50px] ${bgFeature}`}
+                ></div>
+              </div>
               {feature}
             </div>
           ))}

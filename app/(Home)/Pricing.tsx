@@ -1,6 +1,7 @@
 import React from "react";
 import HighlightedTitle from "./components/Highlighted";
 import PricingCards from "./PricingCards";
+import ReuseableButton from "./components/ReuseableButton";
 // import { Props } from "./PricingCards";
 
 interface Props {
@@ -24,6 +25,7 @@ interface Props {
   titleColor?: string;
   feature: string[];
   featureColor: string;
+  bgFeature: string;
 }
 
 const cardData: Props[] = [
@@ -55,6 +57,7 @@ const cardData: Props[] = [
       "80-Design Hour",
     ],
     featureColor: "text-customGray",
+    bgFeature: "bg-customGray",
   },
   {
     title: "Professional",
@@ -84,7 +87,8 @@ const cardData: Props[] = [
       "Updates Every 2 Days",
       "128 Design Hours",
     ],
-    featureColor: "text-",
+    featureColor: "text-lightGray",
+    bgFeature: "bg-darkGrey",
   },
 ];
 
@@ -130,6 +134,7 @@ const Pricing = () => {
                 titleColor,
                 feature,
                 featureColor,
+                bgFeature,
               }) => {
                 return (
                   <PricingCards
@@ -154,10 +159,32 @@ const Pricing = () => {
                     titleColor={titleColor}
                     features={feature}
                     featureColor={featureColor}
+                    bgFeature={bgFeature}
                   />
                 );
               }
             )}
+          </div>
+          <div className="flex w-full py-8 px-10 justify-between items-center gap-6 border-solid border-[1px] border-[#eee] rounded-[32px] bg-white">
+            <h4 className="text-[24px] my-0 leading-[112%] font-medium tracking-[-0.72px] text-[#1b1b1b] ">
+              Need custom solution for all of your needs?
+            </h4>
+            <div className=" flex gap-3 ">
+              <ReuseableButton
+                text={"Book a call"}
+                className={
+                  "px-[32px] py-[20px] text-white bg-[#1b1b1b] gap-2 flex hover:px-[39px] ease-linear hover:bg-black/85"
+                }
+                icon={true}
+              />
+              <ReuseableButton
+                text={"Book a call"}
+                className={
+                  "px-[32px] py-[20px] text-[#1b1b1b]  bg-[#eee] gap-2 flex hover:px-[39px] ease-linear"
+                }
+                icon={false}
+              />
+            </div>
           </div>
         </div>
       </section>
