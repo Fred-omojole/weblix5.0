@@ -21,6 +21,7 @@ const config: Config = {
         "custom-blue-4": "var(--custom-blue-4)",
         "custom-purple-32": "var(--custom-purple-32)",
         "custom-purple-4": "var(--custom-purple-4)",
+        customGray: "#8b8b8b",
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -22,43 +22,9 @@ interface Props {
   categoryColor: string;
   priceColor: string;
   titleColor?: string;
+  feature: string[];
+  featureColor: string;
 }
-
-// const cardData: Props[] = [
-//   {
-//     title: "starter",
-//     category: "Small Projects",
-//     target: "Small Businesses & Startups",
-//     borderColor: "#eee",
-//     borderColor2: "#f4f4f4 ",
-//     bgColor: "#fbfbfb",
-//     bgColor2: "#ffffff",
-//     word: "Ideal for ",
-//     textColor: "#1b1b1b",
-//     textColor2: "#8b8b8b",
-//     price: "2,500",
-//     color: "#ffffff",
-//     className:
-//       "border-solid border-[1px] border-[#eee] flex py-[20px] px-[32px] justify-center items-center gap-[10px] rounded-[100px] text-center ",
-//   },
-
-//   {
-//     title: "Professional",
-//     category: "Big Projects",
-//     target: "Scaling Businesses & Ventures",
-//     borderColor: "#1b1b1b",
-//     borderColor2: "#323232",
-//     bgColor: "#1b1b1b",
-//     bgColor2: "#323232",
-//     word: "Great for ",
-//     textColor: "#ffffff",
-//     textColor2: "#8b8b8b",
-//     price: "4,500",
-//     color: "#1b1b1b",
-//     className:
-//       "border-solid border-[1px] border-[#eee] flex py-[20px] px-[32px] justify-center items-center gap-[10px] rounded-[100px] text-center ",
-//   },
-// ];
 
 const cardData: Props[] = [
   {
@@ -80,6 +46,15 @@ const cardData: Props[] = [
     categoryBg: " bg-green-100/70 ",
     categoryColor: "text-green-600",
     priceColor: "text-black",
+    feature: [
+      "Basic Development",
+      "Core Functionalities",
+      "Standard Support",
+      "Weekly Consulting Call",
+      "Bi-Weekly Updates",
+      "80-Design Hour",
+    ],
+    featureColor: "text-customGray",
   },
   {
     title: "Professional",
@@ -101,6 +76,15 @@ const cardData: Props[] = [
     categoryBg: "bg-white/10",
     priceColor: "text-white",
     titleColor: "text-white",
+    feature: [
+      "Advanced Development",
+      "Full Feature Set",
+      "24/7 Priority Support",
+      "Daily Consulting Call",
+      "Updates Every 2 Days",
+      "128 Design Hours",
+    ],
+    featureColor: "text-",
   },
 ];
 
@@ -144,6 +128,8 @@ const Pricing = () => {
                 categoryBg,
                 priceColor,
                 titleColor,
+                feature,
+                featureColor,
               }) => {
                 return (
                   <PricingCards
@@ -166,6 +152,8 @@ const Pricing = () => {
                     categoryBg={categoryBg}
                     priceColor={priceColor}
                     titleColor={titleColor}
+                    features={feature}
+                    featureColor={featureColor}
                   />
                 );
               }

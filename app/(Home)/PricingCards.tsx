@@ -21,6 +21,8 @@ interface Props {
   categoryBg: string;
   priceColor: string;
   titleColor?: string;
+  features: string[];
+  featureColor: string;
 }
 
 function PricingCards({
@@ -43,7 +45,13 @@ function PricingCards({
   categoryBg,
   categoryColor,
   priceColor,
+  features,
+  featureColor,
 }: Props) {
+  const half = Math.ceil(features.length / 2);
+  const firstHalf = features.slice(0, half);
+  const secondHalf = features.slice(half);
+
   return (
     <div
       className={`${bgColor} ${borderColor} flex flex-col flex-nowrap p-3 gap-0 border-solid border-[1px] rounded-[32px]`}
@@ -92,6 +100,28 @@ function PricingCards({
             <PiRocketLaunchThin className="w-5 h-5 max-w-[100%] align-middle inline-block " />
             <div className={`${color}`}> {button}</div>
           </a>
+        </div>
+      </div>
+      <div className="flex p-[28px] gap-[24px]">
+        <div className="flex flex-col flex-1 gap-[14px]">
+          {firstHalf.map((feature, index) => (
+            <div
+              key={index}
+              className={`${featureColor} flex justify-start items-start gap-[8px] text-white/60 text-[14px] leading-[132%] tracking-[-0.14%]`}
+            >
+              {feature}
+            </div>
+          ))}
+        </div>
+        <div className="flex flex-col flex-1 gap-[14px]">
+          {secondHalf.map((feature, index) => (
+            <div
+              key={index}
+              className={` ${featureColor}   flex justify-start items-start gap-[8px]  text-white/60 text-[14px] leading-[132%] tracking-[-0.14%]`}
+            >
+              {feature}
+            </div>
+          ))}
         </div>
       </div>
     </div>
