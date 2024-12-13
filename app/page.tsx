@@ -8,6 +8,8 @@ import Services from "./(Home)/components/Services";
 import Thicker from "./(Home)/components/thicker";
 import Hero from "./(Home)/Hero";
 import Pricing from "./(Home)/Pricing";
+import Question from "./(Home)/Question";
+import Testimonial from "./(Home)/Testimonial";
 // import { NavbarDemo } from "./(Home)/Navbar";
 import Works from "./(Home)/Works";
 
@@ -26,6 +28,8 @@ export default function Home() {
       <Works />
       {/* <div className=""> */}
       <Pricing />
+      <Question />
+      <Testimonial />
       {/* </div> */}
     </main>
   );
