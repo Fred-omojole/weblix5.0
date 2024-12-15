@@ -6,6 +6,7 @@ import Benefits from "./(Home)/Benefits";
 import About from "./(Home)/components/About";
 import Services from "./(Home)/components/Services";
 import Thicker from "./(Home)/components/thicker";
+import Contact from "./(Home)/Contact";
 import Hero from "./(Home)/Hero";
 import Pricing from "./(Home)/Pricing";
 import Question from "./(Home)/Question";
@@ -30,6 +31,7 @@ export default function Home() {
       <Pricing />
       <Question />
       <Testimonial />
+      <Contact />
       {/* </div> */}
     </main>
   );
