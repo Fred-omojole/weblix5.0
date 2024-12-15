@@ -7,6 +7,7 @@ import About from "./(Home)/components/About";
 import Services from "./(Home)/components/Services";
 import Thicker from "./(Home)/components/thicker";
 import Contact from "./(Home)/Contact";
+import Footer from "./(Home)/Footer";
 import Hero from "./(Home)/Hero";
 import Pricing from "./(Home)/Pricing";
 import Question from "./(Home)/Question";
@@ -32,6 +33,7 @@ export default function Home() {
       <Question />
       <Testimonial />
       <Contact />
+      <Footer />
       {/* </div> */}
     </main>
   );
