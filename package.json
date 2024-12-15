@@ -10,9 +10,6 @@
     "slicemachine": "start-slicemachine"
   },
   "dependencies": {
-    "@prismicio/client": "^7.11.0",
-    "@prismicio/next": "^1.7.0",
-    "@prismicio/react": "^2.9.0",
     "@radix-ui/react-accordion": "^1.2.1",
     "accordion": "^3.0.2",
     "class-variance-authority": "^0.7.0",
@@ -30,7 +27,6 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@slicemachine/adapter-next": "^0.3.51",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
