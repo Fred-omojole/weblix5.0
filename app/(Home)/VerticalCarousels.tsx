@@ -15,7 +15,7 @@ const VerticalCarousels = ({ images }: CarouselProps) => {
         return (
           <a
             key={index}
-            className="flex w-full p-6 justify-center items-center aspect-square border-solid border-[1px] border-[#eee] bg-[#eee] rounded-[32px]"
+            className="flex w-full p-[6px] justify-center items-center aspect-square border-solid border-[1px] border-[#eee] bg-[#eee] rounded-[32px]"
           >
             <Image src={url} width={85} height={85} alt="logo" />
           </a>

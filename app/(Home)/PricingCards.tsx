@@ -1,3 +1,5 @@
+import { fadeIn } from "@/lib/variant";
+import { motion } from "framer-motion";
 import { PiRocketLaunchThin } from "react-icons/pi";
 
 interface Props {
@@ -55,7 +57,11 @@ function PricingCards({
   const secondHalf = features.slice(half);
 
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      variants={fadeIn("up", 0.05, 0.6)}
+      whileInView="show"
+      viewport={{ once: true, amount: 0.1 }}
       className={`${bgColor} ${borderColor} flex flex-col flex-nowrap p-3 gap-0 border-solid border-[1px] rounded-[32px]`}
     >
       <div
@@ -136,7 +142,7 @@ function PricingCards({
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

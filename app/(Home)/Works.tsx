@@ -1,3 +1,7 @@
+"use client";
+
+import { fadeIn } from "@/lib/variant";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
@@ -72,9 +76,15 @@ const workImage: Image[] = [
 
 const Works = () => {
   return (
-    <section className="mt-[160px] pt-[80px] pb-[240px] ">
+    <section id="works" className="mt-[160px] pt-[80px] pb-[240px] ">
       <div className="flex w-full max-w-[1216px] pr-[64px] pl-[64px] flex-col flex-nowrap justify-start items-center ml-auto mr-auto">
-        <div className="flex w-full mb-[80px] pr-[40px] pl-[40px] justify-between items-end gap-10">
+        <motion.div
+          initial="hidden"
+          variants={fadeIn("up", 0.05, 0.6)}
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="flex w-full mb-[80px] pr-[40px] pl-[40px] justify-between items-end gap-10"
+        >
           <h2 className=" text-[#1b1b1b] max-w-[560px] mt-0 mb-0 text-[78px] leading-[104%] tracking-[-3.12px] font-medium">
             Showcase{" "}
             <span className="text-[#8b8b8b] flex"> of&nbsp;Excellence</span>
@@ -85,27 +95,20 @@ const Works = () => {
               our creativity and expertise in delivering exceptional results.
             </p>
           </div>
-        </div>
+        </motion.div>
         <div className="w-full">
           <div className=" grid w-full grid-cols-2 gap-y-10 gap-x-[20px] ">
             {workImage.map(
               ({ id, url_1, url_2, title, action, icon, bgColor }) => {
                 return (
                   <div key={id} className="w-full h-auto">
-                    <a className="flex flex-col flex-nowrap gap-6 h-auto">
-                      {/* <div
-                        style={{ backgroundColor: bgColor }}
-                        className={`  relative flex overflow-hidden w-full pt-12 pr-12 pl-12 flex-col flex-nowrap justify-start items-center aspect-[532/640]   rounded-[32px]`}
-                      >
-                        <Image
-                          className="w-auto h-full aspect-[436/592] rounded-tl-[16px] rounded-tr-[16px] object-cover max-w-full align-middle inline-block"
-                          src={url_1}
-                          alt={title}
-                          width={900}
-                          height={900}
-                        />
-                      </div> */}
-
+                    <motion.a
+                      initial="hidden"
+                      variants={fadeIn("up", 0.05, 0.6)}
+                      whileInView="show"
+                      viewport={{ once: true, amount: 0.1 }}
+                      className="flex flex-col flex-nowrap gap-6 h-auto"
+                    >
                       <div
                         style={{ backgroundColor: bgColor }}
                         className="relative flex overflow-hidden w-full pt-12 pr-12 pl-12 flex-col flex-nowrap justify-start items-center aspect-[532/640] rounded-[32px] group"
@@ -142,7 +145,7 @@ const Works = () => {
                           </span>
                         </div>
                       </div>
-                    </a>
+                    </motion.a>
                   </div>
                 );
               }

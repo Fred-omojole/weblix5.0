@@ -1,6 +1,10 @@
+"use client";
+
 import React from "react";
 import ReuseableButton from "./components/ReuseableButton";
 import Image from "next/image";
+import { fadeIn } from "@/lib/variant";
+import { motion } from "framer-motion";
 
 interface Sender {
   name: string;
@@ -92,7 +96,13 @@ const Testimonial = () => {
   return (
     <section className="mt-[160px] pt-[80px] pb-[240px]">
       <div className="flex w-full max-w-[1216px] px-[64px] flex-col flex-nowrap justify-start items-center mx-auto ">
-        <div className="flex w-full mb-[80px] px-[40px] justify-between items-end gap-[40px]">
+        <motion.div
+          initial="hidden"
+          variants={fadeIn("up", 0.05, 0.6)}
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="flex w-full mb-[80px] px-[40px] justify-between items-end gap-[40px]"
+        >
           <h2 className="max-w-[560px] my-[0px] text-[78px] leading-[104%] font-medium tracking-[-3.12px]">
             <span className="text-[#8b8b8b]">Voices from</span> Our&nbsp;Clients
           </h2>
@@ -103,13 +113,17 @@ const Testimonial = () => {
             }
             icon={true}
           />
-        </div>
+        </motion.div>
       </div>
       <div className="flex w-full max-w-[1216px] mx-auto px-[64px] flex-col flex-nowrap justify-start items-center ">
         <div className="grid grid-cols-2 w-full gap-[24px] row-auto">
           {conversation.map(({ id, sender, reply }) => {
             return (
-              <div
+              <motion.div
+                initial="hidden"
+                variants={fadeIn("up", 0.05, 0.6)}
+                whileInView="show"
+                viewport={{ once: true, amount: 0.1 }}
                 key={id}
                 className="flex w-full h-[640px] pt-[40px] px-[40px] pb-[48px] flex-col flex-nowrap justify-between gap-[24px] border-solid border-[1px] border-[#eee] rounded-[32px] bg-white"
               >
@@ -169,7 +183,7 @@ const Testimonial = () => {
                     <div className="text-[#8b8b8b]">{sender.role}</div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

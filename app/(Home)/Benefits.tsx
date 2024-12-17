@@ -1,9 +1,13 @@
+"use client";
+
 import React from "react";
 import ReuseableButton from "./components/ReuseableButton";
 import { IoIosCheckmark } from "react-icons/io";
 import { HiMiniXMark } from "react-icons/hi2";
 import Image from "next/image";
 import VerticalCarousels from "./VerticalCarousels";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/variant";
 
 interface OptimalProps {
   icon: JSX.Element;
@@ -81,7 +85,13 @@ const Benefits = () => {
   return (
     <section className="mt-[160px] pt-[80px] pb-0">
       <div className="flex w-full max-w-[1216px] px-[64px] flex-col flex-nowrap justify-start items-center mx-auto">
-        <div className="flex w-full px-[40px] mb-[80px] justify-between items-end gap-10">
+        <motion.div
+          initial="hidden"
+          variants={fadeIn("up", 0.05, 0.6)}
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="flex w-full px-[40px] mb-[80px] justify-between items-end gap-10"
+        >
           <h2 className="my-0 max-w-[560px] text-[78px] leading-[104%] font-medium tracking-[-3.12px] text-[#8b8b8b]">
             Benefits that{" "}
             <span className="capitalize text-black">drive success</span>
@@ -93,8 +103,14 @@ const Benefits = () => {
             }
             icon={true}
           />
-        </div>
-        <div className="flex  w-full mb-6 pt-[40px] pr-[40px] pb-[24px] pl-[40px] gap-0 border-solid border-[1px] border-[#eee] rounded-[32px] bg-white">
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          variants={fadeIn("up", 0.05, 0.6)}
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="flex  w-full mb-6 pt-[40px] pr-[40px] pb-[24px] pl-[40px] gap-0 border-solid border-[1px] border-[#eee] rounded-[32px] bg-white"
+        >
           <div className="flex flex-col flex-nowrap justify-start items-start gap-8 flex-1">
             <Image
               src="/weblix logo.svg"
@@ -141,22 +157,62 @@ const Benefits = () => {
               })}
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className="flex overflow-hidden w-full h-[600px] pr-10 pl-10  gap-3 border-solid border-[1px] rounded-[32px] border-[#eee]">
-          <div className="overflow-hidden flex-1">
+          <div className="overflow-hidden gap-3 flex-1 relative">
+            {/* Animated Wrapper */}
+            <div className="absolute w-full animate-slide-down">
+              <div className="flex flex-col flex-nowrap">
+                {/* First set of carousels */}
+                <div className="flex w-full flex-col justify-start items-center gap-3">
+                  <VerticalCarousels images={images} />
+                  <VerticalCarousels images={images} />
+                  <VerticalCarousels images={images} />
+                </div>
+
+                {/* Duplicate set of carousels */}
+                <div className="flex w-full flex-col justify-start items-center gap-3">
+                  <VerticalCarousels images={images} />
+                  <VerticalCarousels images={images} />
+                  <VerticalCarousels images={images} />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="overflow-hidden gap-3 flex-1 relative"> */}
+          {/* Animated Wrapper */}
+          {/* <div className="absolute w-full animate-slide-down"> */}
+          {/* Content: Combine first and duplicate */}
+          {/* <div className="flex flex-col flex-nowrap"> */}
+          {/* First set of carousels */}
+          {/* <div className="flex w-full flex-col justify-start items-center gap-3">
+                  <VerticalCarousels images={images} />
+                  <VerticalCarousels images={images} />
+                </div> */}
+
+          {/* Duplicate set of carousels */}
+          {/* <div className="flex w-full flex-col justify-start items-center gap-3">
+                  <VerticalCarousels images={images} />
+                  <VerticalCarousels images={images} />
+                </div>
+              </div>
+            </div>
+          </div> */}
+
+          {/* <div className="overflow-hidden gap-3 flex-1">
             <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
               <div className="flex w-full animate-slide-down flex-col flex-nowrap justify-start items-center gap-3 ">
                 <VerticalCarousels images={images} />
-                {/* <VerticalCarousels images={images} /> */}
               </div>
             </div>
 
             <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
               <div className="flex w-full animate-slide-down flex-col flex-nowrap justify-start items-center gap-3 ">
-                <VerticalCarousels images={images} />
+                <VerticalCarousels images={image} />
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="overflow-hidden flex-1">
             <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
@@ -165,12 +221,6 @@ const Benefits = () => {
                 <VerticalCarousels images={image} />
               </div>
             </div>
-
-            {/* <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-                <VerticalCarousels images={image} />
-              </div>
-            </div> */}
           </div>
 
           <div className="overflow-hidden flex-1">
@@ -180,12 +230,6 @@ const Benefits = () => {
                 <VerticalCarousels images={images} />
               </div>
             </div>
-
-            {/* <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-                <VerticalCarousels images={image} />
-              </div>
-            </div> */}
           </div>
 
           <div className="overflow-hidden flex-1">
@@ -195,12 +239,6 @@ const Benefits = () => {
                 <VerticalCarousels images={image} />
               </div>
             </div>
-
-            {/* <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-                <VerticalCarousels images={image} />
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

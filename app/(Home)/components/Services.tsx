@@ -1,21 +1,36 @@
+"use client";
 import React from "react";
 
 import ServiceCards from "../ServiceCards";
 import ReuseableButton from "./ReuseableButton";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/variant";
 
 const Services = () => {
   return (
-    <section className="mt-40 pt-20 pb-0 ">
+    <section id="services" className="mt-40 pt-20 pb-0 ">
       <div className="flex w-full max-w-[1216px] pr-[64px] pl-[64px] flex-col flex-nowrap flex-start items-center ml-auto mr-auto">
         <div className="flex w-full mb-20 pr-10 pl-10 justify-between items-end gap-20">
-          <div className="max-w-[560px]">
+          <motion.div
+            initial="hidden"
+            variants={fadeIn("up", 0.03, 0.6)}
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1 }}
+            className="max-w-[560px]"
+          >
             <h2 className=" my-0 text-[78px] leading-[104%] font-medium tracking-[-3.12px] capitalize">
               digital excellence,{" "}
               <span className="text-[#8b8b8b]">delivered</span>
             </h2>
-          </div>
+          </motion.div>
         </div>
-        <div className=" flex w-full flex-col flex-nowrap justify-start items-start gap-6">
+        <motion.div
+          initial="hidden"
+          variants={fadeIn("up", 0.05, 0.6)}
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className=" flex w-full flex-col flex-nowrap justify-start items-start gap-6"
+        >
           <div className="flex w-full p-10 flex-col flex-nowrap gap-8 border-solid border-[1px] rounded-[32px] bg-white border-t-[#eee] border-b-[#eee] border-r-[#eee] border-l-[#eee]">
             <div className="flex justify-between items-center gap-6">
               <h3 className="my-0 text-[32px] leading-[116%] font-medium tracking-[-1.28px] ">
@@ -30,7 +45,13 @@ const Services = () => {
               <ServiceCards />
             </div>
           </div>
-          <div className="flex w-full py-8 px-10 justify-between items-center gap-6 border-solid border-[1px] border-[#eee] rounded-[32px] bg-white">
+          <motion.div
+            initial="hidden"
+            variants={fadeIn("up", 0.05, 0.6)}
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1 }}
+            className="flex w-full py-8 px-10 justify-between items-center gap-6 border-solid border-[1px] border-[#eee] rounded-[32px] bg-white"
+          >
             <h4 className="text-[24px] my-0 leading-[112%] font-medium tracking-[-0.72px] text-[#1b1b1b] ">
               Need custom solution for all of your needs?
             </h4>
@@ -50,8 +71,8 @@ const Services = () => {
                 icon={false}
               />
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

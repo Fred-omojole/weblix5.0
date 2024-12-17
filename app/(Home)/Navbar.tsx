@@ -50,10 +50,10 @@ export function NavbarDemo() {
 
 function Navbar({ className }: { className?: string }) {
   const navContent: NavContents[] = [
-    { title: "services", href: "/services" },
-    { title: "works", href: "/works" },
-    { title: "pricing", href: "/pricing" },
-    { title: "contact us", href: "/contact-us" },
+    { title: "services", href: "#services" },
+    { title: "works", href: "#works" },
+    { title: "pricing", href: "#pricing" },
+    { title: "contact us", href: "#contact-us" },
   ];
 
   return (
@@ -73,7 +73,11 @@ function Navbar({ className }: { className?: string }) {
             <Link
               href={item.href}
               key={item.href}
-              className={`${index === 0 ? "hover:rounded-l-full" : ""} ${index != 0 ? "border-l border-solid" : ""}  ${index === navContent.length - 1 ? "hover: rounded-r-full" : ""} capitalize cursor-pointer w-full   flex items-center justify-center text-[#8b8b8b]  text-[14px] leading-[132%] tracking-[-0.14px]  pt-6 pb-6 pl-8 pr-8 hover:px-[48px] transition-all hover:bg-[#eee] `}
+              className={`${index === 0 ? "hover:rounded-l-full" : ""} ${
+                index != 0 ? "border-l border-solid" : ""
+              }  ${
+                index === navContent.length - 1 ? "hover: rounded-r-full" : ""
+              } capitalize cursor-pointer w-full   flex items-center justify-center text-[#8b8b8b]  text-[14px] leading-[132%] tracking-[-0.14px]  pt-6 pb-6 pl-8 pr-8 hover:px-[48px] transition-all hover:bg-[#eee] `}
             >
               {index === navContent.length - 1 ? (
                 <>

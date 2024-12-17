@@ -197,6 +197,8 @@ const Thicker = () => {
             </div>
           </div>
         </div>
+        <div className="absolute top-0 right-auto bottom-0 left-0 w-[320px] bg-[linear-gradient(90deg,#fbfbfb,hsla(0,0%,98.43%,0))]"></div>
+        <div className="absolute top-0 right-0 bottom-0 left-auto w-[320px] bg-[linear-gradient(270deg,#fbfbfb,hsla(0,0%,98.43%,0))]"></div>
       </div>
     </>
   );

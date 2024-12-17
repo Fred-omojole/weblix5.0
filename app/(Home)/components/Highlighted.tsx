@@ -16,6 +16,7 @@ interface HighlightedProps {
   suffix?: string;
   colorScheme?: "green" | "blue" | "purple" | "custom";
   customColors?: ColorScheme;
+  isAnimated?: boolean;
 }
 // USING A TYPESCRIPT TYPE THAT CREATES AN OBJECT TYPE WHERE THE KEYS ARE OF TYPE K AND THE VALUES ARE OF TYPE T Record<K, T>
 const colorSchemes: Record<string, ColorScheme> = {
@@ -45,16 +46,19 @@ const HighlightedTitle = ({
   suffix = "Web Experience",
   colorScheme = "green",
   customColors,
+  isAnimated = true,
 }: HighlightedProps) => {
   const colors = customColors || colorSchemes[colorScheme];
+  const HeadingComponent = isAnimated ? motion.h1 : "h1";
   return (
-    <motion.h1
+    <HeadingComponent
       className={className}
-      initial="hidden"
-      variants={fadeIn("up", 0.01, 0.4)}
-      animate="show"
-      viewport={{ once: true, amount: 0.2 }}
-      // whileInView={"show"}
+      {...(isAnimated && {
+        initial: "hidden",
+        variants: fadeIn("up", 0.01, 0.4),
+        animate: "show",
+        viewport: { once: true, amount: 0.2 },
+      })}
     >
       {text}{" "}
       <span
@@ -67,7 +71,7 @@ const HighlightedTitle = ({
         <span className="relative">{highlightedText}</span>
       </span>
       {suffix && `${suffix}`}
-    </motion.h1>
+    </HeadingComponent>
   );
 };
 

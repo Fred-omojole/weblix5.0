@@ -1,5 +1,6 @@
 "use client";
-
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/variant";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -68,11 +69,21 @@ const Accordion = () => {
   }, [isOpen]);
   return (
     <div>
-      <div className="flex w-full gap-[16px]">
+      <div
+        // initial="hidden"
+        // variants={fadeIn("up", 0.05, 0.6)}
+        // whileInView="show"
+        // viewport={{ once: true, amount: 0.1 }}
+        className="flex w-full gap-[16px]"
+      >
         {/* First Column */}
         <div className="flex flex-col flex-nowrap flex-1 gap-[16px]">
           {firstHalf.map(({ id, title, content }) => (
-            <div
+            <motion.div
+              initial="hidden"
+              variants={fadeIn("up", 0.05, 0.6)}
+              whileInView="show"
+              viewport={{ once: true, amount: 0.1 }}
               key={id}
               className="flex p-[40px] flex-col gap-0 border-solid border-[1px] border-[#eee] rounded-[24px] cursor-pointer bg-white"
             >
@@ -108,14 +119,18 @@ const Accordion = () => {
                   {content}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Second Column */}
         <div className="flex flex-col flex-nowrap flex-1 gap-[16px]">
           {secondHalf.map(({ id, title, content }) => (
-            <div
+            <motion.div
+              initial="hidden"
+              variants={fadeIn("up", 0.05, 0.6)}
+              whileInView="show"
+              viewport={{ once: true, amount: 0.1 }}
               key={id}
               className="flex p-[40px] flex-col gap-0 border-solid border-[1px] border-[#eee] rounded-[24px] cursor-pointer bg-white"
             >
@@ -151,7 +166,7 @@ const Accordion = () => {
                   {content}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

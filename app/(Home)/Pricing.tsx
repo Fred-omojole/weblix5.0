@@ -1,7 +1,11 @@
+"use client";
+
 import React from "react";
 import HighlightedTitle from "./components/Highlighted";
 import PricingCards from "./PricingCards";
 import ReuseableButton from "./components/ReuseableButton";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/variant";
 // import { Props } from "./PricingCards";
 
 interface Props {
@@ -95,10 +99,17 @@ const cardData: Props[] = [
 const Pricing = () => {
   return (
     <div className="w-full relative bg-dot-black/[0.1] bg-green bg-[#f4f4f4] pt-[160px] pb-[240px] ">
-      <section className="pt-[80px]">
+      <section id="pricing" className="pt-[80px]">
         <div className="flex w-full max-w-[1216px] pr-[64px] pl-[64px] mx-auto flex-col flex-nowrap justify-start items-center">
-          <div className="flex w-full mb-[80px] px-[40px] justify-between items-end gap-10">
+          <motion.div
+            initial="hidden"
+            variants={fadeIn("up", 0.05, 0.6)}
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1 }}
+            className="flex w-full mb-[80px] px-[40px] justify-between items-end gap-10"
+          >
             <HighlightedTitle
+              isAnimated={false}
               className="max-w-[560px] mt-0 mb-0 text-[78px] leading-[104%] font-medium tracking-[-3.12px] "
               text={"Flexible"}
               highlightedText={"Pricing Plans"}
@@ -111,7 +122,7 @@ const Pricing = () => {
                 providing clear and competitive rates for all our services.
               </p>
             </div>
-          </div>
+          </motion.div>
           <div className=" w-full mb-[24px] gap-[24px] grid grid-cols-2 row-auto">
             {cardData.map(
               ({
@@ -165,7 +176,13 @@ const Pricing = () => {
               }
             )}
           </div>
-          <div className="flex w-full py-8 px-10 justify-between items-center gap-6 border-solid border-[1px] border-[#eee] rounded-[32px] bg-white">
+          <motion.div
+            initial="hidden"
+            variants={fadeIn("up", 0.05, 0.6)}
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1 }}
+            className="flex w-full py-8 px-10 justify-between items-center gap-6 border-solid border-[1px] border-[#eee] rounded-[32px] bg-white"
+          >
             <h4 className="text-[24px] my-0 leading-[112%] font-medium tracking-[-0.72px] text-[#1b1b1b] ">
               Need custom solution for all of your needs?
             </h4>
@@ -185,7 +202,7 @@ const Pricing = () => {
                 icon={false}
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

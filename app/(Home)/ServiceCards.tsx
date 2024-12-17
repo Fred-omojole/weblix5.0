@@ -59,8 +59,8 @@ const ServiceCards = () => {
                 key={id}
                 className={
                   id === cards.length
-                    ? `relative flex row-span-1 col-span-2 overflow-hidden w-full  h-[464px] py-[40px] px-[32px] flex-col flex-nowrap justify-end items-start border-solid border-[1px] rounded-2xl border-t-[#eee] border-b-[#eee] border-r-[#eee] border-l-[#eee] `
-                    : `relative flex  overflow-hidden w-full max-w-[100%] h-[560px] py-[40px] px-[32px] flex-col flex-nowrap justify-end items-start border-solid border-[1px] rounded-2xl border-t-[#eee] border-b-[#eee] border-r-[#eee] border-l-[#eee] `
+                    ? `group  relative flex row-span-1 col-span-2 overflow-hidden w-full  h-[464px] py-[40px] px-[32px] flex-col flex-nowrap justify-end items-start border-solid border-[1px] rounded-2xl border-t-[#eee] border-b-[#eee] border-r-[#eee] border-l-[#eee] `
+                    : `group  relative flex  overflow-hidden w-full max-w-[100%] h-[560px] py-[40px] px-[32px] flex-col flex-nowrap justify-end items-start border-solid border-[1px] rounded-2xl border-t-[#eee] border-b-[#eee] border-r-[#eee] border-l-[#eee] `
                 }
               >
                 <div className="relative text-black z-10 flex flex-col justify-start items-start gap-5">
@@ -83,10 +83,10 @@ const ServiceCards = () => {
                     </span>
                   </div>
                 </div>
-                <div className="absolute inset-0 z-[1] w-full h-full bg-[linear-gradient(45deg,black_15%,hsla(0,0.00%,10.59%,0.00)_80%)] "></div>
+                <div className=" cursor-pointer absolute inset-0 z-[1] w-full h-full bg-[linear-gradient(45deg,black_15%,hsla(0,0.00%,10.59%,0.00)_80%)] "></div>
 
                 <Image
-                  className="w-full h-full absolute object-cover inset-0 z-0   max-w-[100%] align-middle inline-block"
+                  className="  w-full h-full absolute object-cover inset-0 z-0   max-w-[100%] align-middle inline-block group-hover:scale-110 transition-transform duration-500 "
                   src={imageUrl}
                   alt={alt}
                   fill

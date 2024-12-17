@@ -1,13 +1,22 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import ReuseableButton from "./ReuseableButton";
 import Link from "next/link";
+import { fadeIn } from "@/lib/variant";
 const About = () => {
   return (
     <section className="mt-40 pt-20 pb-60 ">
       <div className="flex w-full pr-16 pl-16 flex-col justify-start items-center ">
-        <div className="flex flex-col gap-8 max-w-[720px]">
-          <div className="  bg-black flex w-[68px] h-[68px] justify-center p-5 items-center rounded-[20px] shadow-lg">
+        <motion.div
+          initial="hidden"
+          variants={fadeIn("up", 0.05, 0.6)}
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="flex flex-col gap-8 max-w-[720px]"
+        >
+          <div className="bg-black flex w-[68px] h-[68px] justify-center p-5 items-center rounded-[20px] shadow-lg">
             <Image
               src="/sparkle.svg"
               alt="about-sparkle"
@@ -37,10 +46,9 @@ const About = () => {
                 "border-solid border-[1px] text-black hover:px-[40px] hover:bg-[#f4f4f4] bg-[#eee] border-[#eee] duration-200   px-[32px] py-[20px] flex items-center justify-center capitalize  "
               }
               icon={false}
-            /> 
-                 
+            />
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
