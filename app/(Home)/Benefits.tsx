@@ -8,6 +8,8 @@ import Image from "next/image";
 import VerticalCarousels from "./VerticalCarousels";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/variant";
+import InfiniteVerticalScroll from "./scroll";
+import { InfiniteSlider } from "@/components/ui/InfiniteSlider";
 
 interface OptimalProps {
   icon: JSX.Element;
@@ -158,87 +160,74 @@ const Benefits = () => {
             </div>
           </div>
         </motion.div>
-        <div className="flex overflow-hidden w-full h-[600px] pr-10 pl-10  gap-3 border-solid border-[1px] rounded-[32px] border-[#eee]">
-          <div className="overflow-hidden gap-3 flex-1 relative">
-            {/* Animated Wrapper */}
-            <div className="absolute w-full animate-slide-down">
-              <div className="flex flex-col flex-nowrap">
-                {/* First set of carousels */}
-                <div className="flex w-full flex-col justify-start items-center gap-3">
-                  <VerticalCarousels images={images} />
-                  <VerticalCarousels images={images} />
-                  <VerticalCarousels images={images} />
-                </div>
+        <div className="flex overflow-hidden w-full h-[600px] px-10  gap-3 border-solid border-[1px] rounded-[32px] border-[#eee] b">
+          <div className="grid grid-cols-4 w-full h-[600px] space-x-4">
+            <InfiniteSlider className="w-full" direction="vertical">
+              {images.map(({ url }, index) => (
+                <a
+                  className="aspect-square flex w-full p-10 justify-center border-solid border-[1px] border-[#eee] rounded-[32px] bg-[#f4f4f4]    "
+                  key={index}
+                >
+                  <Image
+                    className="aspect-square w-[100px]"
+                    src={url}
+                    width={50}
+                    height={50}
+                    alt="logo"
+                  />
+                </a>
+              ))}
+            </InfiniteSlider>
 
-                {/* Duplicate set of carousels */}
-                <div className="flex w-full flex-col justify-start items-center gap-3">
-                  <VerticalCarousels images={images} />
-                  <VerticalCarousels images={images} />
-                  <VerticalCarousels images={images} />
-                </div>
-              </div>
-            </div>
-          </div>
+            <InfiniteSlider direction="vertical" reverse>
+              {image.map(({ url }, index) => (
+                <a
+                  className="aspect-square flex w-full p-10 justify-center border-solid border-[1px] border-[#eee] rounded-[32px] bg-[#f4f4f4]    "
+                  key={index}
+                >
+                  <Image
+                    className="aspect-square w-[100px]"
+                    src={url}
+                    width={50}
+                    height={50}
+                    alt="logo"
+                  />
+                </a>
+              ))}
+            </InfiniteSlider>
 
-          {/* <div className="overflow-hidden gap-3 flex-1 relative"> */}
-          {/* Animated Wrapper */}
-          {/* <div className="absolute w-full animate-slide-down"> */}
-          {/* Content: Combine first and duplicate */}
-          {/* <div className="flex flex-col flex-nowrap"> */}
-          {/* First set of carousels */}
-          {/* <div className="flex w-full flex-col justify-start items-center gap-3">
-                  <VerticalCarousels images={images} />
-                  <VerticalCarousels images={images} />
-                </div> */}
-
-          {/* Duplicate set of carousels */}
-          {/* <div className="flex w-full flex-col justify-start items-center gap-3">
-                  <VerticalCarousels images={images} />
-                  <VerticalCarousels images={images} />
-                </div>
-              </div>
-            </div>
-          </div> */}
-
-          {/* <div className="overflow-hidden gap-3 flex-1">
-            <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-              <div className="flex w-full animate-slide-down flex-col flex-nowrap justify-start items-center gap-3 ">
-                <VerticalCarousels images={images} />
-              </div>
-            </div>
-
-            <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-              <div className="flex w-full animate-slide-down flex-col flex-nowrap justify-start items-center gap-3 ">
-                <VerticalCarousels images={image} />
-              </div>
-            </div>
-          </div> */}
-
-          <div className="overflow-hidden flex-1">
-            <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-              <div className=" flex animate-slide-up w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-                <VerticalCarousels images={image} />
-                <VerticalCarousels images={image} />
-              </div>
-            </div>
-          </div>
-
-          <div className="overflow-hidden flex-1">
-            <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-                <VerticalCarousels images={images} />
-                <VerticalCarousels images={images} />
-              </div>
-            </div>
-          </div>
-
-          <div className="overflow-hidden flex-1">
-            <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-              <div className="flex w-full flex-col flex-nowrap justify-start items-center gap-3 ">
-                <VerticalCarousels images={image} />
-                <VerticalCarousels images={image} />
-              </div>
-            </div>
+            <InfiniteSlider direction="vertical">
+              {images.map(({ url }, index) => (
+                <a
+                  className="aspect-square flex w-full p-10 justify-center border-solid border-[1px] border-[#eee] rounded-[32px] bg-[#f4f4f4]    "
+                  key={index}
+                >
+                  <Image
+                    className="aspect-square  w-[100px]"
+                    src={url}
+                    width={50}
+                    height={50}
+                    alt="logo"
+                  />
+                </a>
+              ))}
+            </InfiniteSlider>
+            <InfiniteSlider direction="vertical" reverse>
+              {image.map(({ url }, index) => (
+                <a
+                  className="aspect-square flex w-full p-10 justify-center border-solid border-[1px] border-[#eee] rounded-[32px] bg-[#f4f4f4]    "
+                  key={index}
+                >
+                  <Image
+                    className="aspect-square  w-[100px]"
+                    src={url}
+                    width={50}
+                    height={50}
+                    alt="logo"
+                  />
+                </a>
+              ))}
+            </InfiniteSlider>
           </div>
         </div>
       </div>
