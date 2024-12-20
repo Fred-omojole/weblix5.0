@@ -27,10 +27,10 @@ export const metadata: Metadata = {
     siteName: "weblix-snowy.vercel.app",
     images: [
       {
-        url: "https://github.com/victorcodess/flixify/assets/84178696/e7b1ffb1-498e-421e-a1b0-48092068ef0c",
+        url: "https://github.com/Fred-omojole/weblix5.0/blob/48ab7878f5c2801cf2bad300f532deacaea0dbf2/assets/shots.png?raw=true",
         width: 1200,
         height: 630,
-        alt: "Flixify — Entertainment Web App",
+        alt: "Webify — Entertainment Web App",
       },
     ],
     locale: "en-US",
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flixify — Entertainment Web App",
+    title: "webify — Web Solution Agency",
     description:
-      "Explore a vast collection of movies and TV series, bookmark your favorites, and enjoy seamless navigation across genres.",
-    creator: "victorwill__",
-    creatorId: "1243720976552144897",
+      "Webify empowers businesses with seamless web solutions, delivering intuitive designs, responsive layouts, and tailored experiences across every page.",
+    creator: "yele — Frontend dev",
+    creatorId: "omoyele60762",
     images: [
-      "https://github.com/victorcodess/flixify/assets/84178696/e7b1ffb1-498e-421e-a1b0-48092068ef0c",
+      "https://github.com/Fred-omojole/weblix5.0/blob/48ab7878f5c2801cf2bad300f532deacaea0dbf2/assets/shots.png?raw=true",
     ],
   },
   robots: {
