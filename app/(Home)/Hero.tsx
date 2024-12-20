@@ -24,7 +24,7 @@ const Hero = () => {
             </div>
             <motion.div
               initial="hidden"
-              variants={fadeIn("up", 0.05, 0.2)}
+              variants={fadeIn("up", 0.05, 0.4)}
               animate="show"
               viewport={{ once: true, amount: 0.1 }}
               className="text-sm font-medium text-black flex gap-2 items-center"
