@@ -5,10 +5,10 @@ import ReuseableButton from "./components/ReuseableButton";
 import { IoIosCheckmark } from "react-icons/io";
 import { HiMiniXMark } from "react-icons/hi2";
 import Image from "next/image";
-// import VerticalCarousels from "./VerticalCarousels";
+
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/variant";
-// import InfiniteVerticalScroll from "./scroll";
+
 import { InfiniteSlider } from "@/components/ui/InfiniteSlider";
 
 interface OptimalProps {
