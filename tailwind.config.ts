@@ -39,28 +39,8 @@ const config: Config = {
       animation: {
         "slide-left": "slideLeft 29s linear infinite",
         "slide-right": "slideRight 29s linear infinite",
-        "slide-up": "slideUp 30s linear infinite",
-        "slide-down": "slideDown 30s linear infinite",
       },
       keyframes: {
-        slideDown: {
-          "0%": { transform: "translateY(-100%)" }, // Start just above view
-          "100%": { transform: "translateY(0%)" }, // End in view (bottom of duplicate)
-        },
-        slideUp: {
-          "0%": { transform: "translateY(0%)" }, // Start in view
-          "100%": { transform: "translateY(-100%)" }, // Scroll out of view (top of duplicate)
-        },
-
-        // slideDown: {
-        //   "0%": { transform: "translateY(-100%)" }, // Starts out of view (above)
-        //   "100%": { transform: "translateY(0%)" }, // Ends back at the starting position
-        // },
-        // slideUp: {
-        //   "0%": { transform: "translateY(0%)" }, // Starts in view
-        //   "100%": { transform: "translateY(-100%)" }, // Moves out of view (above)
-        // },
-
         slideLeft: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },
