@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     icon: ["/logoss.png?v=4"],
     shortcut: ["/logoss.png"],
   },
-
+  viewport: "width=device-width, initial-scale=1.0",
   generator: "Next.js",
   colorScheme: "light",
   openGraph: {
